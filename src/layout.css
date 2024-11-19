@@ -180,8 +180,35 @@ body {
     object-fit: cover;
 }
 
-/*------ me gusta ------*/
+/*------ logout ------*/
+/* Menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px; /* Muestra el menú justo debajo del botón */
+    right: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
 
+.dropdown-content.show {
+    display: block; /* Mostrar el menú si tiene la clase "show" */
+}
+
+.dropdown-content a {
+    color: #000000;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.logout-button {
+	margin-left: 10px;
+}
 
 /*------ responsive ------*/
 @media (max-width: 1200px) {
