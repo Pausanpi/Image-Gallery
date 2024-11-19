@@ -94,11 +94,11 @@ body {
 .pinterest-icon {
     margin-right: 10px;
 	color: var(--pinterest-red);
-	width: 24px;
-	height: 24px;
+	width: 32px;
+	height: 32px;
 	cursor: pointer;
-	transform: rotate(180deg) scaleX(-1);
-	transform: rotate(100deg) scaleY(-1);
+	/*transform: rotate(180deg) scaleX(-1);
+	transform: rotate(100deg) scaleY(-1);*/
 }
 
 .nav-button {
