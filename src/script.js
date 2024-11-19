@@ -83,12 +83,14 @@ document.getElementById('search-query')?.addEventListener('keydown', event => {
 
 // Redirección a favoritos
 document.getElementById('favorites-button')?.addEventListener('click', () => {
-    window.location.href = 'http://localhost:5500/src/fav.html'; // Redirige a la página de favoritos
+    //window.location.href = 'http://localhost:5500/src/fav.html'; // Redirige a la página de favoritos
+    window.location.href = '/src/fav.html'; 
 });
 
 // Redirección a home
 document.getElementById('home-button')?.addEventListener('click', () => {
-    window.location.href = 'http://localhost:5500/src/layout.html'; // Redirige a layout.html
+    //window.location.href = 'http://localhost:5500/src/layout.html'; // Redirige a layout.html
+    window.location.href = '/src/layout.html'; 
 });
 
 // Inicializar la galería con fotos destacadas de Unsplash
@@ -97,7 +99,8 @@ fetchPhotos();
 // Manejo del botón de Logout
 document.getElementById('logoutButton')?.addEventListener('click', () => {
 	console.log("Logout button clicked"); // Para depuración
-	window.location.href = 'http://localhost:5500/src/index.html';
+	//window.location.href = 'http://localhost:5500/src/index.html';
+    window.location.href = '/src/index.html'; 
 });
 
 document.getElementById('profile-img').addEventListener('click', function () {
