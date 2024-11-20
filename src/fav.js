@@ -143,3 +143,15 @@ document.getElementById('search-query')?.addEventListener('keydown', event => {
         }
     }
 });
+
+// Función para alternar estado de favoritos
+function toggleFavorite(photoId) {
+    if (favoritePhotos.includes(photoId)) {
+        favoritePhotos = favoritePhotos.filter(id => id !== photoId);
+    } else {
+        favoritePhotos.push(photoId);
+    }
+
+    localStorage.setItem('favoritePhotos', JSON.stringify(favoritePhotos));
+    fetchPhotos(currentSearchQuery); // Actualizar la galería para reflejar los cambios
+}
