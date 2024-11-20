@@ -81,12 +81,12 @@ document.getElementById('search-query')?.addEventListener('keydown', event => {
     }
 });
 
-// Redirección a favoritos
+//------------- Redirección a favoritos -------------
 document.getElementById('favorites-button')?.addEventListener('click', () => {
     window.location.href = 'http://localhost:5500/src/fav.html';
 });
 
-// Redirección a home
+//------------- Redirección a home ------------------
 document.getElementById('home-button')?.addEventListener('click', () => {
     window.location.href = 'http://localhost:5500/src/layout.html';
 });
@@ -94,7 +94,7 @@ document.getElementById('home-button')?.addEventListener('click', () => {
 // Inicializar la galería con fotos destacadas de Unsplash
 fetchPhotos();
 
-// Manejo del botón de Logout
+//---------- Manejo del botón de Logout -----------------
 document.getElementById('logoutButton')?.addEventListener('click', () => {
 	console.log("Logout button clicked"); // Para depuración
 	window.location.href = 'http://localhost:5500/src/index.html';
