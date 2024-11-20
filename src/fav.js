@@ -10,7 +10,6 @@ document.getElementById('home-button')?.addEventListener('click', () => {
 
 //--------- LOG OUT -----------------
 document.getElementById('logoutButton')?.addEventListener('click', () => {
-	console.log("Logout button clicked"); // Para depuración
 	window.location.href = 'http://localhost:5500/src/index.html';
 });
 
@@ -81,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //---------- BARRA DE BUSQUEDA ----------------
 function fetchPhotos(query = '') {
-    const perPage = 30; // Número de fotos por página
+    const perPage = 30;
     const endpoint = query
         ? `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=${perPage}`
         : `https://api.unsplash.com/photos?per_page=${perPage}`;
@@ -101,7 +100,7 @@ function fetchPhotos(query = '') {
             return response.json();
         })
         .then(data => {
-            const photos = query ? data.results : data; // Usar `results` solo si es búsqueda
+            const photos = query ? data.results : data;
             renderGallery(photos);
         })
         .catch(error => console.error('Error fetching photos:', error));
@@ -109,7 +108,7 @@ function fetchPhotos(query = '') {
 
 function renderGallery(photos) {
     const gallery = document.getElementById('gallery');
-    gallery.innerHTML = ''; // Limpiar la galería antes de renderizar nuevas fotos
+    gallery.innerHTML = '';
 
     if (photos.length === 0) {
         gallery.innerHTML = '<p>No photos found.</p>';
@@ -117,7 +116,7 @@ function renderGallery(photos) {
     }
 
     photos.forEach(photo => {
-        const isFavorite = favoritePhotos.includes(photo.id); // Verifica si es favorito
+        const isFavorite = favoritePhotos.includes(photo.id);
         const photoItem = document.createElement('div');
         photoItem.classList.add('photo-item');
         photoItem.innerHTML = `
@@ -135,11 +134,11 @@ function renderGallery(photos) {
 
 document.getElementById('search-query')?.addEventListener('keydown', event => {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Prevenir comportamiento predeterminado
-        const query = event.target.value.trim(); // Obtener valor del input
+        event.preventDefault();
+        const query = event.target.value.trim();
         if (query) {
-            currentSearchQuery = query; // Guardar la búsqueda actual
-            fetchPhotos(query); // Llamar a la función de búsqueda
+            currentSearchQuery = query;
+            fetchPhotos(query);
         }
     }
 });
@@ -153,5 +152,5 @@ function toggleFavorite(photoId) {
     }
 
     localStorage.setItem('favoritePhotos', JSON.stringify(favoritePhotos));
-    fetchPhotos(currentSearchQuery); // Actualizar la galería para reflejar los cambios
+    fetchPhotos(currentSearchQuery);
 }

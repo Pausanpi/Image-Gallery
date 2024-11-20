@@ -101,8 +101,6 @@ body {
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
-	/*transform: rotate(180deg) scaleX(-1);
-	transform: rotate(100deg) scaleY(-1);*/
 }
 
 .nav-button {
@@ -190,7 +188,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 60px; /* Muestra el menú justo debajo del botón */
+    top: 60px;
     right: 0;
     background-color: #ffffff;
     min-width: 160px;
@@ -200,7 +198,7 @@ body {
 }
 
 .dropdown-content.show {
-    display: block; /* Mostrar el menú si tiene la clase "show" */
+    display: block;
 }
 
 .dropdown-content a {
@@ -215,27 +213,27 @@ body {
 	margin-left: 10px;
 }
 
-/*------ responsive ------*/
+/*------ RESPONSIVE ------*/
 @media (max-width: 1200px) {
     #gallery {
-        column-count: 4;  /* Menos columnas en pantallas más pequeñas */
+        column-count: 4;
     }
 }
 
 @media (max-width: 900px) {
     #gallery {
-        column-count: 3;  /* Menos columnas en pantallas aún más pequeñas */
+        column-count: 3;
     }
 }
 
 @media (max-width: 600px) {
     #gallery {
-        column-count: 2;  /* Dos columnas en pantallas muy pequeñas */
+        column-count: 2;
     }
 }
 
 @media (max-width: 400px) {
     #gallery {
-        column-count: 1;  /* Una sola columna en pantallas muy pequeñas */
+        column-count: 2;
     }
 }
